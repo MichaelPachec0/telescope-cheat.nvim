@@ -75,18 +75,19 @@ M[4] = {
   end,
 }
 
-M[5] = {
-  name = "tldr",
-  uri = "https://github.com/tldr-pages/tldr",
-  root = "",
-  depth = 3,
-  pattern = "%.md",
-  add_dirs = false,
-  ft = "markdown",
-  parse = parse,
-  get_ns_keyword = function(path)
-    return "tldr", path:match ".*/([^./]+).*"
-  end,
-}
+-- WARN: this sources causes multiple entries when searching, comment out for now.
+-- M[5] = {
+--   name = "tldr",
+--   uri = "https://github.com/tldr-pages/tldr",
+--   root = "",
+--   depth = 3,
+--   pattern = "%.md",
+--   add_dirs = false,
+--   ft = "markdown",
+--   parse = parse,
+--   get_ns_keyword = function(path)
+--     return "tldr", path:match ".*/([^./]+).*"
+--   end,
+-- }
 
 return M
