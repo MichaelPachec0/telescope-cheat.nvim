@@ -43,7 +43,7 @@ M[2] = {
   ft = "markdown",
   parse = parse,
   get_ns_keyword = function(path)
-    return "lang", path:match ".*/([^./]+).*"
+    return "learn", path:match ".*/([^./]+).*"
   end,
 }
 
@@ -57,7 +57,7 @@ M[3] = {
   ft = "markdown",
   parse = parse,
   get_ns_keyword = function(path)
-    return "lang", path:match ".*/([^./]+).*"
+    return "nvim", path:match ".*/([^./]+).*"
   end,
 }
 
@@ -71,7 +71,7 @@ M[4] = {
   ft = "markdown",
   parse = parse,
   get_ns_keyword = function(path)
-    return "lang", path:match ".*/([^./]+).*"
+    return "rsts", path:match ".*/([^./]+).*"
   end,
 }
 
@@ -85,7 +85,7 @@ M[5] = {
   ft = "markdown",
   parse = parse,
   get_ns_keyword = function(path)
-    return "lang", path:match ".*/([^./]+).*"
+    return "tldr", path:match ".*/([^./]+).*"
   end,
 }
 
