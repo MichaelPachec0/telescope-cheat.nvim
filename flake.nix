@@ -22,11 +22,13 @@
   in {
     overlays = {
       default = final: prev: {
-        vimPlugins = prev.vimPlugins.extend (final': prev': {
-          telescope-cheat-nvim = prev.vimPlugins.telescope-cheat-nvim.overrideAttrs (old: {
-            src = ./.;
-          });
-        });
+        vimPlugins =
+          prev.vimPlugins
+          // {
+            telescope-cheat-nvim = prev.vimPlugins.telescope-cheat-nvim.overrideAttrs (old: {
+              src = ./.;
+            });
+          };
       };
     };
     # NOTE: does the same for packages, this outputs a package for every target supported by nixpkgs
